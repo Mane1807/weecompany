@@ -1,3 +1,4 @@
+import "./Formulario.css";
 const Tabla = ({ datos }) => {
   const datosPorPracticante = datos.reduce((acumulador, dato) => {
     if (!acumulador[dato.nombre]) {
@@ -6,6 +7,7 @@ const Tabla = ({ datos }) => {
         totalDatos: 0
       };
     }
+    
     acumulador[dato.nombre].cantidadDatos += dato.datos.length;
     acumulador[dato.nombre].totalDatos += dato.datos.reduce((acc, val) => acc + val, 0);
     return acumulador;
@@ -29,7 +31,11 @@ const Tabla = ({ datos }) => {
   }
 
   return (
-    <table className="table">
+   <div className="form-control" >
+
+  
+    <table className="table  ">
+      
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -53,12 +59,13 @@ const Tabla = ({ datos }) => {
       <tfoot>
         <tr>
           <td colSpan="4">
-            <p>El practicante con más datos: {maximoDatos} es: {practicanteConMasDatos}</p>
-            <p>El practicante con menos datos: {minimoDatos} es: {practicanteConMenosDatos}</p>
+            <p className="text-center max">Max: ({maximoDatos})  {practicanteConMasDatos}</p>
+            <p className="text-center min">Min:({minimoDatos})  {practicanteConMenosDatos}</p>
           </td>
         </tr>
       </tfoot>
     </table>
+    </div>
   );
 };
 

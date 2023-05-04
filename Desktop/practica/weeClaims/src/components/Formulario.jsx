@@ -33,7 +33,7 @@ const Formulario = ({ agregarDatos }) => {
       <div className="mb-3">
         <input
           type="text"
-          className="form-control"
+          className="form-control "
           placeholder="Nombre del Practicante: "
           value={nombrePracticante}
           onChange={handleNombrePracticante}
@@ -50,7 +50,9 @@ const Formulario = ({ agregarDatos }) => {
           required
         ></input>
       </div>
-      <button className="btn btn-primary form-control">Guardar</button>
+      
+      <button className=" btn-primary form-control">Guardar</button>
+      <br />
     </form>
   );
 };

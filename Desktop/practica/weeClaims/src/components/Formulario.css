@@ -1,4 +1,14 @@
-.input-form {
-    max-width: 400px;
+.form-control {
+    max-width: 900px;
     margin: 0 auto;
+    
   }
+  .max {
+    color: red;
+  }
+  
+  .min {
+    color: blue;
+  }
+
+  
