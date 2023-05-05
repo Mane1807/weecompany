@@ -30,7 +30,11 @@ const Formulario = ({ agregarDatos }) => {
 
   return (
     <form onSubmit={handleSubmit}>
+      <div className="text-center mb-3">
+        <h5>Ingreso de datos:</h5>
+     </div>
       <div className="mb-3">
+        
         <input
           type="text"
           className="form-control "
